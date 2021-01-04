@@ -48,10 +48,18 @@ def links_to_txt():
            f.write("%s\n" % item)
 
 def download_function():
-    ydl_opts = {}
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec':'mp3',
+            'preferredquality':'192'
+        }]
+    }
+    with open('links.txt') as f:
+        urls = f.readlines()
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        pass
-        # download(url)
+        ydl.download(urls)
 
 
 
@@ -62,4 +70,5 @@ def main():
     links_to_txt()
     print("File written to links.txt")
 
-main()
+# main()
+download_function()
