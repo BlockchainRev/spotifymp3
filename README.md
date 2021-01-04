@@ -8,8 +8,9 @@ The instructions are made (really) easy, so anyone can use this.
 
 
 
-1) Go to joellehman.com/playlist/index.html and export the playlist to .csv format If make .csv does not work, just copy the text into an Excel sheet and export to csv. It will format itself.
+1) Go to joellehman.com/playlist/index.html and export the playlist to .csv format If make .csv does not work, just copy the text into an Excel sheet and export to csv. It will format itself. It should look exactly like this format.
 
+![alt text](https://raw.githubusercontent.com/BlockchainRev/spotifymp3/main/Images/Screen%20Shot%202021-01-04%20at%2012.11.49%20PM.png?token=ALLIN5635FPXI5TUWROURGK76NS7Y)
 
 2) Clone this GitHub repository. 
 
