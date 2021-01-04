@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -8,8 +9,8 @@ PATH = "/Users/samaylakhani/Documents/chromedriver"
 import urllib.request
 from bs4 import BeautifulSoup
 import os
-from __future__ import unicode_literals
 import youtube_dl
+import csv
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
 options.add_argument("disable-infobars")
@@ -32,8 +33,6 @@ def iterate_over_list(csv_to_list_of_songs):
     for item in csv_to_list_of_songs:
         open_and_save_link(item)
 
-import csv
-
 def generate_search(filename):
     with open(filename, newline='') as f:
         reader = csv.reader(f)
@@ -48,6 +47,7 @@ def links_to_txt():
            f.write("%s\n" % item)
 
 def download_function():
+    # os.chdir('Your Music')
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -61,14 +61,13 @@ def download_function():
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download(urls)
 
-
-
 def main():
     filename = input('What is the name of the .csv [name.csv]? :')
     generate_search(filename)
     iterate_over_list(search_list)
     links_to_txt()
     print("File written to links.txt")
+    download_function()
+    print('done')
 
-# main()
-download_function()
+main()
