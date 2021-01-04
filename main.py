@@ -1,14 +1,14 @@
+from __future__ import unicode_literals
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-PATH = "/Users/samaylakhani/Documents/chromedriver"
+PATH = "[PUT THE PATH TO YOUR CHROMEDRIVER HERE]"
 import urllib.request
 from bs4 import BeautifulSoup
 import os
-from __future__ import unicode_literals
 import youtube_dl
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
@@ -48,10 +48,19 @@ def links_to_txt():
            f.write("%s\n" % item)
 
 def download_function():
-    ydl_opts = {}
+    # os.chdir('Your Music')
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec':'mp3',
+            'preferredquality':'192'
+        }]
+    }
+    with open('links.txt') as f:
+        urls = f.readlines()
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        pass
-        # download(url)
+        ydl.download(urls)
 
 
 
@@ -61,5 +70,8 @@ def main():
     iterate_over_list(search_list)
     links_to_txt()
     print("File written to links.txt")
+    download_function()
+
+    print('Done')
 
 main()
