@@ -1,7 +1,7 @@
 # spotifymp3 
 Spotify to MP3 is a service to take a .csv of your Spotify playlist (instructions on how to get that below) and then download every song to a .mp3 format.
 
-This takes the csv, searches the keywords on Youtube, takes the first link, and downloads the video. It may not be perfect and can quite possibly return the wrong file.
+This takes the csv, searches the keywords on Youtube, takes the first link, and downloads the video. It may not be perfect and can quite possibly return the wrong file. Also, there may be a UI coming soon!
 
 The instructions are made (really) easy, so anyone can use this.
 
