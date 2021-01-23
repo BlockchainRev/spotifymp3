@@ -3,6 +3,8 @@ Spotify to MP3 is a service to take a .csv of your Spotify playlist (instruction
 
 This takes the csv, searches the keywords on Youtube, takes the first link, and downloads the video. It may not be perfect and can quite possibly return the wrong file. Also, there may be a UI coming soon!
 
+A ~750-800 song playlist will take 2 hours, and a 100 song playlist 15 minutes.
+
 The instructions are made (really) easy, so anyone can use this.
 
 
@@ -36,3 +38,4 @@ Notice the extensions and lack thereof.
 9) Provide the .csv name in the format **name.csv**
 
 10) Wait for downloads to complete.
+
