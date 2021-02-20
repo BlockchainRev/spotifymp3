@@ -1,6 +1,6 @@
 # spotifymp3 
 ### Spotify to MP3 is a service to take a .csv of your Spotify playlist (instructions below) and then download every song to a .mp3 format. ###
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Description ##
 
 This takes the csv, searches the keywords on Youtube, takes the first link, and downloads the video. Not perfect and can possibly return the wrong file. Also, there may be a UI coming soon!
@@ -8,7 +8,6 @@ This takes the csv, searches the keywords on Youtube, takes the first link, and 
 ~750-800 song playlist will take 2 hours, and a 100 song playlist 15 minutes.
 
 The instructions are made (really) easy, so anyone can use this.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Steps #
 1) Go to joellehman.com/playlist/index.html and export the playlist to .csv format If make .csv does not work, just copy the text into an Excel sheet and export to csv. It will format itself. It should look exactly like this format. 
