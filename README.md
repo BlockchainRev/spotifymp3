@@ -5,7 +5,8 @@
 
 This takes the csv, searches the keywords on Youtube, takes the first link, and downloads the video. Not perfect and can possibly return the wrong file. Also, there may be a UI coming soon!
 
-** ~750-800 song playlist will take 2 hours, and a 100 song playlist 15 minutes.**
+~750-800 song playlist will take 2 hours, and a 100 song playlist 15 minutes.
+
 The instructions are made (really) easy, so anyone can use this.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
